@@ -16,11 +16,27 @@ import {
   dataProjet,
 } from '@/data'
 import PageTitleParcours from '@/widgets/layout/page-title-parcours'
-import { push, ref, set } from "firebase/database";
+import { push, ref, set } from 'firebase/database'
 import { database } from '@/firebase-config'
+import { toast, ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 export function Home() {
   let formRef = useRef()
+
+  const validateEmail = (email) => {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+
+    return emailPattern.test(email)
+  }
+  const validateInput = (name) => {
+    if (name.trim() == '') {
+      console.log(name.trim())
+      return true
+    }
+    return false
+  }
+
   const sendMessageToBdd = async (e) => {
     e.preventDefault()
     // console.log(nameRef)
@@ -30,22 +46,43 @@ export function Home() {
     console.log(name)
     console.log(mail)
     console.log(message)
+    if (
+      validateInput(formRef.current[0].value) ||
+      validateInput(formRef.current[1].value) ||
+      validateInput(formRef.current[2].value)
+    ) {
+      return toast.error('Vous avez oublié de remplir un des champs !', {
+        containerId: 'error',
+        position: 'bottom-right',
+      })
+    }
+    if (!validateEmail(mail)) {
+      return toast.error(
+        'Votre mail n\'est pas du type "example@example.com"',
+        {
+          containerId: 'error',
+          position: 'bottom-right',
+        },
+      )
+    }
     try {
       const messageRef = ref(database, 'Messages')
-      
+
       const newMessageRef = push(messageRef)
       set(newMessageRef, {
-          name: name,
-          mail: mail,
-          message: message,
-          id_message: Date.now() ,
-          dateSend: Date.now()
-      });
-      formRef.current[0].value = ""
-      formRef.current[1].value = ""
-      formRef.current[2].value = ""
-
-
+        name: name,
+        mail: mail,
+        message: message,
+        id_message: Date.now(),
+        dateSend: Date.now(),
+      })
+      formRef.current[0].value = ''
+      formRef.current[1].value = ''
+      formRef.current[2].value = ''
+      toast.success('Votre message a bien été envoyé !', {
+        containerId: 'succes',
+        position: 'bottom-right',
+      })
     } catch (e) {
       console.error('Error adding document: ', e)
     }
@@ -255,10 +292,7 @@ export function Home() {
           >
             Remplissez ce formulaire et je vous répondrai dans les 24 heures.
           </PageTitle>
-          <form
-            ref={formRef}
-            className="mx-auto w-full mt-12 lg:w-5/12"
-          >
+          <form ref={formRef} className="mx-auto w-full mt-12 lg:w-5/12">
             <div className="mb-8 flex flex-wrap gap-8">
               <Input name="nom" variant="outlined" size="lg" label="Nom" />
               <Input
@@ -266,7 +300,6 @@ export function Home() {
                 variant="outlined"
                 size="lg"
                 label="Address Email"
-                
               />
             </div>
             <Textarea
@@ -290,6 +323,8 @@ export function Home() {
           </form>
         </div>
       </section>
+      <ToastContainer containerId="error" />
+      <ToastContainer containerId="succes" />
     </>
   )
 }

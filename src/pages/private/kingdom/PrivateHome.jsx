@@ -1,12 +1,24 @@
 import { auth, database } from '@/firebase-config'
 import { signOut } from 'firebase/auth'
 import { useNavigate } from 'react-router-dom'
-import { getDatabase, ref, onValue } from 'firebase/database'
+import { ref, onValue, remove } from 'firebase/database'
 import { useEffect, useState } from 'react'
 
 function PrivateHome() {
   const navigate = useNavigate()
   const [messageListe, setMessageListe] = useState()
+
+  const deleteMessage = (id) => {
+    const messageRef = ref(database, `Messages/${id}`)
+    remove(messageRef)
+      .then(() => {
+        console.log('Document successfully deleted!')
+      })
+      .catch((error) => {
+        console.error('Error removing document: ', error)
+      })
+    // console.table(id)
+  }
 
   const logOut = async () => {
     try {
@@ -49,7 +61,7 @@ function PrivateHome() {
         <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
           <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
-              <th scope="col" className="p-4">
+              {/* <th scope="col" className="p-4">
                 <div className="flex items-center">
                   <input
                     id="checkbox-all-search"
@@ -60,7 +72,7 @@ function PrivateHome() {
                     checkbox
                   </label>
                 </div>
-              </th>
+              </th> */}
               <th scope="col" className="px-6 py-3">
                 Email
               </th>
@@ -70,6 +82,9 @@ function PrivateHome() {
               <th scope="col" className="px-6 py-3">
                 Message
               </th>
+              {/* <th scope="col" className="px-6 py-3">
+                Date
+              </th> */}
               <th scope="col" className="px-6 py-3">
                 Action
               </th>
@@ -82,7 +97,7 @@ function PrivateHome() {
                   key={element.id}
                   className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
                 >
-                  <td className="w-4 p-4">
+                  {/* <td className="w-4 p-4">
                     <div className="flex items-center">
                       <input
                         id={`checkbox-table-search-${element.id}`}
@@ -96,7 +111,7 @@ function PrivateHome() {
                         checkbox
                       </label>
                     </div>
-                  </td>
+                  </td> */}
                   <th
                     scope="row"
                     className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
@@ -105,10 +120,12 @@ function PrivateHome() {
                   </th>
                   <td className="px-6 py-4">{element.name}</td>
                   <td className="px-6 py-4">{element.message}</td>
+                  {/* <td className="px-6 py-4">{element.dateSend}</td> */}
                   <td className="px-6 py-4">
                     <a
                       href="#"
                       className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                      onClick={() => deleteMessage(element.id)}
                     >
                       supprimer
                     </a>
