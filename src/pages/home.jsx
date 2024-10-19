@@ -383,7 +383,7 @@ export function Home() {
 
           <section
             id="meContacter"
-            className="relative bg-white pb-20 pt-20 px-4"
+            className=" pb-20 pt-20 px-4"
           >
             <div className="container mx-auto">
               <PageTitle
@@ -418,6 +418,8 @@ export function Home() {
                   size="lg"
                   className="mt-8"
                   fullWidth
+                  onMouseEnter={textEnter}
+                  onMouseLeave={textLeave2}
                   onClick={sendMessageToBdd}
                 >
                   Envoyer

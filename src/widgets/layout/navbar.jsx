@@ -9,6 +9,8 @@ import {
   Collapse,
 } from "@material-tailwind/react";
 import { logoData, teamData } from "@/data"
+// let {  textEnter,  textLeave } =
+// useContext(MouseContext)
 
 
 export function Navbar({ routes, action }) {

@@ -42,7 +42,7 @@ const CustomCursor = () => {
 
     // Directly update motion.div transform via ref
     if (cursorRef.current) {
-      cursorRef.current.style.transform = `translate(${circle.current.x}px, ${circle.current.y}px) 
+      cursorRef.current.style.transform = `translate(${circle.current.x -20}px, ${circle.current.y-20}px) 
                                            rotate(${currentAngle.current}deg) 
                                            scaleX(${1 + currentScale.current}) 
                                            scaleY(${1 - currentScale.current})`;
@@ -57,7 +57,6 @@ const CustomCursor = () => {
       mouse.current.x = e.clientX;
       mouse.current.y = e.clientY;
     };
-
     window.addEventListener('mousemove', handleMouseMove);
 
     // Start the animation loop
@@ -70,12 +69,12 @@ const CustomCursor = () => {
 
   let variants = {
     default: {
-      x: mouse.x - 16,
-      y: mouse.y - 16,
+      x: mouse.x ,
+      y: mouse.y ,
     },
     text: {
-      x: mouse.x ,
-      y: mouse.y,
+      x: mouse.x -75,
+      y: mouse.y -75,
       height: 100,
       width: 100,
       backgroundColor:'white',
@@ -87,8 +86,8 @@ const CustomCursor = () => {
       backgroundColor:'black',
     },
     text2: {
-      x: mouse.x ,
-      y: mouse.y,
+      x: mouse.x - 5,
+      y: mouse.y -5,
       height: 100,
       width: 100,
       backgroundColor:'black',

@@ -4,12 +4,12 @@ import { MouseContext } from '@/context/mouseContext'
 import { useContext } from 'react'
 
 export function PageTitle({ section, heading, children }) {
-  let {  textEnter,  textLeave2 } =
+  let {  textEnter2,  textLeave2 } =
     useContext(MouseContext)
   return (
     <div className="mx-auto w-full px-4 text-center lg:w-6/12">
       <Typography
-        onMouseEnter={textEnter}
+        onMouseEnter={textEnter2}
         onMouseLeave={textLeave2}
         variant="lead"
         className="font-semibold"
@@ -17,7 +17,7 @@ export function PageTitle({ section, heading, children }) {
         {section}
       </Typography>
       <Typography
-        onMouseEnter={textEnter}
+        onMouseEnter={textEnter2}
         onMouseLeave={textLeave2}
         variant="h2"
         color="blue-gray"
@@ -26,7 +26,7 @@ export function PageTitle({ section, heading, children }) {
         {heading}
       </Typography>
       <Typography
-        onMouseEnter={textEnter}
+        onMouseEnter={textEnter2}
         onMouseLeave={textLeave2}
         variant="lead"
         className="text-blue-gray-500"
