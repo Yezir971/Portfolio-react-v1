@@ -13,7 +13,7 @@ export const featuresData = [
     title: "React",
     icon: "fa-brands fa-react",
     description:
-      "Avec React, je conçois des interfaces utilisateurs réactives et modulaires, offrant une expérience fluide et interactive",
+      "Avec React, je conçois des interfaces utilisateurs réactives et modulaires, offrant une expérience fluide et interactive.",
   },
   {
     color: "red",

@@ -149,9 +149,9 @@ export function Home() {
                   onMouseEnter={textEnter}
                   onMouseLeave={textLeave}
                 >
-                  Ahmedaly James Développeur Web
+                  Ahmedaly James / Développeur Web
                 </Typography>
-                <Typography
+                {/* <Typography
                   variant="lead"
                   color="white"
                   className="opacity-80"
@@ -159,7 +159,7 @@ export function Home() {
                   onMouseLeave={textLeave}
                 >
                   Salut, je m’appelle James et Je suis Développeur Web
-                </Typography>
+                </Typography> */}
               </div>
             </div>
           </div>
@@ -197,7 +197,7 @@ export function Home() {
                 maîtrise HTML, CSS, JavaScript et des frameworks comme React.
                 Curieux et motivé, j'aime relever des défis techniques et
                 collaborer sur des projets innovants. Je suis actuellement à la
-                recherche d’une alternance !
+                recherche d’une alternance, je serais ravi de rejoindre votre équipe.
               </PageTitle>
               <div data-aos="fade-down" className="mt-24 ">
                 {teamData.map(({ img, name, position, socials }) => (
