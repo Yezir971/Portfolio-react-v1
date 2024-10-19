@@ -14,6 +14,8 @@ export function UserContextProvider(props) {
 
   const [currentUser, setCurrentUser] = useState()
   const [loadingData, setLoadingData] = useState(true)
+  let [ passeClick, setPasseClick ] = useState(false)
+
 
   useEffect(() => {
     const pasInscrit = onAuthStateChanged(auth, (currentUser) => {
@@ -23,9 +25,10 @@ export function UserContextProvider(props) {
     return pasInscrit
   }, [])
 
+
   return (
     <UserContext.Provider
-      value={{ signUp, currentUser, signIn }}
+      value={{ signUp,currentUser,signIn,passeClick,setPasseClick }}
     >
       {!loadingData && props.children}
     </UserContext.Provider>

@@ -17,15 +17,18 @@ import { BrowserRouter } from 'react-router-dom'
 import { ThemeProvider } from '@material-tailwind/react'
 import '../public/css/tailwind.css'
 import { UserContextProvider } from './context/userContext'
+import { MouseContextProvider } from './context/mouseContext'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
       <UserContextProvider>
         <ThemeProvider>
-          <App />
+          <MouseContextProvider>
+            <App />
+          </MouseContextProvider>
         </ThemeProvider>
       </UserContextProvider>
     </BrowserRouter>
-  </React.StrictMode>,
+  </React.StrictMode>
 )

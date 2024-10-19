@@ -1,0 +1,263 @@
+*,::after,::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.barreButton{
+    width: 14em;
+    height:3em;
+    background: transparent;
+    position:relative;
+    /* cursor:pointer; */
+    display:grid;
+    grid-template-rows:0.15fr 0.15fr 0.15fr 0.5fr;
+    grid-template-columns:1fr;
+    overflow-x:hidden;
+    margin-top:32px;
+}
+.percentage{
+    position: relative;
+    font-size: 1em;
+    background: #BB221E;
+    height: 1em;
+}
+
+
+.has-tip::before, .has-tip::after{
+    content: "";
+    position: absolute;
+    opacity: 0;
+}
+
+.has-tip::before{
+    bottom: -10px;
+    right: -5px;
+    border: 5px solid;
+    border-color: transparent transparent red transparent;
+    transition: opacity 0.1s;
+}
+
+.has-tip::after{
+    content: attr(data-perc);
+    bottom: 0;
+    right: 0;
+    white-space: nowrap;
+    padding: 0.6em 1em;
+    line-height: 1;
+    color: #fff;
+    background: tomato;
+    transform: translateX(50%) translateY(100%);
+    transition: transform 0.2, opacity 0.1s;
+    
+}
+
+.has-tip:hover::before, .has-tip.active::before {
+    opacity: 1;
+}
+.has-tip:hover::after, .has-tip.active::after{
+    opacity: 1;
+    transform: translateX(50%) translateY(100%) translateY(10px);
+}
+.barAfter{
+    background: #BB221E;
+    border: solid 1px #BB221E;
+    width: 14em;
+    height: 1em;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.constainerCache1, 
+.constainerCache2,
+.constainerCache3,
+.constainerCache4 {
+    width: 100%;
+    display: flex;
+}
+.constainerCache4{
+    margin-top: -1px;
+}
+.cacheGreen1 ,
+.cachePurple1, 
+
+.cachePurple2,
+
+.cacheGreen3,
+.cachePurple3,
+
+.cacheGreen4,
+.cacheTransparent2
+{
+    height: 100%;
+    width: 80%;
+}
+
+
+.cacheGreen2, .cacheTransparent3, .cachePurple4{
+    width: 100%;
+}
+.cacheTransparent2, .cacheTransparent3{
+    background:transparent;
+}
+.cacheGreen1,.cacheGreen2,.cacheGreen3,.cacheGreen4{
+    background: #BB221E;
+}
+.cachePurple1,.cachePurple2,.cachePurple3,.cachePurple4{
+    background: white;
+}
+
+/* première partie de l'animation  */
+.cacheGreen1, .cachePurple1{
+    transform: translateX(-100%);
+}
+.cacheGreen1{
+    animation: slide-in-green 1.8s 0.4s ease-in-out forwards, cubic-bezier(0, -0.04, 0.99, 0.75) forwards ;
+    z-index: 3; 
+}
+.cachePurple1{
+    animation: slide-in1 1.8s 0.4s ease-in-out forwards, cubic-bezier(0, -0.04, 0.99, 0.75) forwards ;
+    z-index: 1;
+}
+
+@keyframes slide-in1 {
+    
+    80% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(158%) scaleX(0%);
+    }
+}
+
+@keyframes slide-in-green {
+    
+    100% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+/* fn de la première partie de l'animation */
+
+
+/* deuxième partie de l'animation  */
+.cacheGreen2, .cacheTransparent3{
+    animation: slide-in-cacheGreen2 1.9s 0.74s linear forwards, linear forwards ;
+    transform: translateX(-160%);
+    z-index: 3; 
+}
+
+.cacheGreen3, .cacheTransparent2{
+    animation: slide-in-cacheGreen3 1.9s 0.74s linear forwards, linear  forwards ;
+    transform: translateX(-200%);
+    z-index: 0; 
+}
+.cachePurple3, .cachePurple2{
+    z-index: 1;
+    transform: translateX(-200%);
+    animation: slide-in-cachePurple2 1.9s .68s ease-in-out forwards, cubic-bezier(0, -0.04, 0.99, 0.75)  forwards ;
+}
+@keyframes slide-in-cacheGreen2 {
+    100% {
+        transform:translateX(130%) scaleX(0);
+    }
+}
+@keyframes slide-in-cacheGreen3 {
+    100% {
+        transform:translateX(130%) scaleX(5.5);
+    }
+}
+@keyframes slide-in-cachePurple2 {
+    100% {
+        transform: translateX(200%) scaleX(0);
+    }
+}
+
+/* fn de la deuxième partie de l'animation */
+
+
+
+/* quatrième partie de l'animation*/
+.cacheGreen4{
+    animation: slide-in-cacheGreen4 2s 0.9s linear forwards, linear forwards ;
+    transform: translateX(-290%);
+    z-index: 0; 
+}
+.cachePurple4 {
+    transform: translateX(-180%);
+    animation: slide-in-cachePurple4 2s 0.9s ease-in-out forwards, cubic-bezier(0, -0.04, 0.99, 0.75) forwards ;
+    z-index: 1;
+}
+
+
+@keyframes slide-in-cachePurple4 {
+    100% {
+        transform: translateX(100%) scaleX(0);
+    }
+}
+
+@keyframes slide-in-cacheGreen4 {
+    100% {
+        transform:translateX(100%) scaleX(5.5);
+    }
+}
+
+/* fin de l'animation de la quatrième partie*/
+
+/* partie animation glitch  */
+
+.glitch1, .glitch2, .glitch3{
+    background: white;
+    color: black;
+    position:absolute;
+    width: 14em;
+    height:3em;
+    display: none; 
+}
+.active{
+    display: block;
+    z-index: 0;
+}
+.glitch1{
+    top: calc(50% - 6px);
+    left: calc(50% - 89px);
+    opacity: 0;
+    animation: glitch1 0.9s forwards;
+}
+@keyframes glitch1 {
+    100%{
+        opacity: 1;
+        transform: translateX(calc(50% - 146px));
+    }
+    
+}
+
+.glitch2{
+    top: calc(50% + 46px);
+    left: calc(50% - 209px);
+    animation: glitch2 0.9s .3s forwards;
+    opacity: 0;
+
+}
+@keyframes glitch2 {
+    100%{
+        opacity: 1;
+        transform: translateX(calc(50% - 146px));
+    }
+}
+
+
+.glitch3{
+    top: calc(50% + 62px);
+    left: calc(50% - 190px);
+    animation: glitch3 0.9s .6s forwards;
+    opacity: 0;
+}
+@keyframes glitch3 {
+
+    100%{
+        transform: translateX(calc(50% - 146px));
+        opacity: 1;
+    }
+}
