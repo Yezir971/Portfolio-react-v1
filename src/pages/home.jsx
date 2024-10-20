@@ -182,22 +182,19 @@ export function Home() {
               </div>
             </div>
           </section>
-          <section className="px-4 pt-20 pb-20 ">
+          <section className="px-4 pt-20 pb-20 bg-white ">
             <div
               id="a-propos"
               data-aos="fade-down"
               className="container mx-auto"
             >
-              <PageTitle
-
-                section="À propos"
-                heading="Qui je suis ?"
-              >
+              <PageTitle heading="Qui suis je ?">
                 Passionné par la création de sites web modernes et intuitifs, je
                 maîtrise HTML, CSS, JavaScript et des frameworks comme React.
                 Curieux et motivé, j'aime relever des défis techniques et
                 collaborer sur des projets innovants. Je suis actuellement à la
-                recherche d’une alternance, je serais ravi de rejoindre votre équipe.
+                recherche d’une alternance, je serais ravi de rejoindre votre
+                équipe.
               </PageTitle>
               <div data-aos="fade-down" className="mt-24 ">
                 {teamData.map(({ img, name, position, socials }) => (
@@ -210,8 +207,13 @@ export function Home() {
                       <div className="flex items-center gap-2">
                         {socials.map(({ color, name, lien }) => (
                           <IconButton key={name} color={color} variant="text">
-                            <a href={lien} target="_blank">
-                              <i className={`fa-brands text-xl fa-${name}`} />
+                            <a
+                              href={lien}
+                              onMouseEnter={textEnter}
+                              onMouseLeave={textLeave2}
+                              target="_blank"
+                            >
+                              <i className={`cursor-pointer fa-brands text-xl fa-${name}`} />
                             </a>
                           </IconButton>
                         ))}
@@ -227,7 +229,7 @@ export function Home() {
             id="monParcours"
             className="container mx-auto relative bg-white pb-20 pt-20 px-4"
           >
-            <PageTitleParcours section="Mon parcours">
+            <PageTitleParcours>
               Un aperçu rapide de mon parcours
             </PageTitleParcours>
             <div
@@ -333,7 +335,7 @@ export function Home() {
             id="projets"
             className="container mx-auto flex flex-col justify-center items-center relative bg-white pb-20 pt-20 px-4"
           >
-            <PageTitleParcours section="Mes projets">
+            <PageTitleParcours>
               Quelques-unes de mes réalisations
             </PageTitleParcours>
             <div className="flex mt-24  flex-wrap justify-center items-end gap-14">
@@ -381,16 +383,9 @@ export function Home() {
             </div>
           </section>
 
-          <section
-            id="meContacter"
-            className=" pb-20 pt-20 px-4"
-          >
-            <div className="container mx-auto">
-              <PageTitle
-              
-                section="Me contacter"
-                heading="Intéressé par mon profil ?"
-              >
+          <section id="meContacter" className=" pb-20 pt-20 px-4 bg-white">
+            <div className="container mx-auto ">
+              <PageTitle heading="Intéressé par mon profil ?">
                 Remplissez ce formulaire et je vous répondrai dans les 24
                 heures.
               </PageTitle>

@@ -42,7 +42,7 @@ const CustomCursor = () => {
 
     // Directly update motion.div transform via ref
     if (cursorRef.current) {
-      cursorRef.current.style.transform = `translate(${circle.current.x -20}px, ${circle.current.y-20}px) 
+      cursorRef.current.style.transform = `translate(${circle.current.x -5}px, ${circle.current.y-5}px) 
                                            rotate(${currentAngle.current}deg) 
                                            scaleX(${1 + currentScale.current}) 
                                            scaleY(${1 - currentScale.current})`;
@@ -75,8 +75,8 @@ const CustomCursor = () => {
     text: {
       x: mouse.x -75,
       y: mouse.y -75,
-      height: 100,
-      width: 100,
+      height: 60,
+      width: 60,
       backgroundColor:'white',
       mixBlendMode:"difference", 
     },
@@ -86,10 +86,10 @@ const CustomCursor = () => {
       backgroundColor:'black',
     },
     text2: {
-      x: mouse.x - 5,
-      y: mouse.y -5,
-      height: 100,
-      width: 100,
+      x: mouse.x - 75,
+      y: mouse.y -75,
+      height: 60,
+      width: 60,
       backgroundColor:'black',
       mixBlendMode:"difference", 
     },

@@ -5,7 +5,7 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { MouseContext } from '@/context/mouseContext'
 export function TeamCard({ img, name, position, socials }) {
-  let { textEnter2, textLeave2 } = useContext(MouseContext)
+  let { textEnter, textLeave2 } = useContext(MouseContext)
   useEffect(() => {
     AOS.init({})
   }, [])
@@ -25,7 +25,7 @@ export function TeamCard({ img, name, position, socials }) {
         />
       </div>
       <Typography
-        onMouseEnter={textEnter2}
+        onMouseEnter={textEnter}
         onMouseLeave={textLeave2}
         variant="h5"
         color="blue-gray"
@@ -35,7 +35,7 @@ export function TeamCard({ img, name, position, socials }) {
       </Typography>
       {position && (
         <Typography
-          onMouseEnter={textEnter2}
+          onMouseEnter={textEnter}
           onMouseLeave={textLeave2}
           className="font-bold text-blue-gray-500"
         >

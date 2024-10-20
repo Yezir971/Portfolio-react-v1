@@ -15,7 +15,8 @@ export const dataProjet =[
         descriptionProjet:'Application permettant de se connecter et d\'envoyer des messages, codée en React avec Firebase pour la gestion de la base de données.',
         linkProjet:'https://yezir971.github.io/messanger',
         technoProjet:'REACT',
-        depotGit:'https://github.com/Yezir971/Projet-generateur-de-mot-de-passe',
+        depotGit:'https://github.com/Yezir971/messanger',
+
     },
     {
         titleProjet:'Générateur de mot de passe',
@@ -24,7 +25,8 @@ export const dataProjet =[
         descriptionProjet:'Générateur de mots de passe évaluant la complexité d\'un mot de passe, codée en JavaScript.',
         linkProjet:'https://yezir971.github.io/Projet-generateur-de-mot-de-passe/',
         technoProjet:'HTML / CSS / javaScript',
-        depotGit:'https://github.com/Yezir971/messanger',
+        depotGit:'https://github.com/Yezir971/Projet-generateur-de-mot-de-passe',
+
     },
 ]
 

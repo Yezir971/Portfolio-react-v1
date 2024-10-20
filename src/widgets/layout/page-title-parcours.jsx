@@ -8,19 +8,19 @@ function PageTitleParcours({ section, children }) {
     useContext(MouseContext)
   return (
     <div className="mx-auto w-full px-4 text-center lg:w-6/12">
-      <Typography
+      {/* <Typography
         onMouseEnter={textEnter}
         onMouseLeave={textLeave2}
         variant="lead"
         className="font-semibold"
       >
         {section}
-      </Typography>
+      </Typography> */}
       <Typography
         onMouseEnter={textEnter}
         onMouseLeave={textLeave2}
         variant="h2"
-        color="blue-gray"
+        color="black"
         className="my-3"
       >
         {children}
@@ -29,7 +29,6 @@ function PageTitleParcours({ section, children }) {
   )
 }
 PageTitleParcours.propTypes = {
-  section: PropTypes.string.isRequired,
   children: PropTypes.string.isRequired,
 }
 
