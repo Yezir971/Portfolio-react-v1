@@ -73,8 +73,8 @@ const CustomCursor = () => {
       y: mouse.y ,
     },
     text: {
-      x: mouse.x -75,
-      y: mouse.y -75,
+      x: mouse.x -15,
+      y: mouse.y -15,
       height: 60,
       width: 60,
       backgroundColor:'white',
@@ -86,8 +86,8 @@ const CustomCursor = () => {
       backgroundColor:'black',
     },
     text2: {
-      x: mouse.x - 75,
-      y: mouse.y -75,
+      x: mouse.x - 15,
+      y: mouse.y - 15,
       height: 60,
       width: 60,
       backgroundColor:'black',

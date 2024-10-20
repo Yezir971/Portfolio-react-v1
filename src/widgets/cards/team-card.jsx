@@ -9,6 +9,7 @@ export function TeamCard({ img, name, position, socials }) {
   useEffect(() => {
     AOS.init({})
   }, [])
+  
   return (
     <Card
       color="transparent"
@@ -17,6 +18,8 @@ export function TeamCard({ img, name, position, socials }) {
     >
       <div data-aos="zoom-in-up">
         <Avatar
+          onMouseEnter={textEnter}
+          onMouseLeave={textLeave2}
           src={img}
           alt={name}
           size="xxl"

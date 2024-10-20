@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import '../assets/style/chargement.css'
 import '../assets/style/hidden.css'
 import { UserContext } from '@/context/userContext'
+// import { MouseContext } from '@/context/mouseContext'
 const Bar = styled.div`
   width: 14em;
   height: 1em;
@@ -30,10 +31,10 @@ const Container = styled.div`
   position: absolute;
 `
 export function Loader() {
+  // let { textEnter, textEnter2, textLeave2, textLeave } =
+  // useContext(MouseContext)
   const [prec, setPrec] = useState(0)
-  const [postPrec, setPostPrec] = useState(0)
   const [showGlitch, setShowglitch] = useState(false)
-  const [canActivateGlitch, setCanActivateGlitch] = useState(false)
   let { passeClick, setPasseClick } = useContext(UserContext)
 
   const showPage = () => {
@@ -83,22 +84,32 @@ export function Loader() {
         ) : (
           <>
             <div className={showGlitch ? 'active glitch1' : 'glitch1'}>
+              
               <Complet>GO</Complet>
             </div>
             <div className={showGlitch ? 'active glitch2' : 'glitch2'}>
               <Complet>GO</Complet>
             </div>
             <div className={showGlitch ? 'active glitch3' : 'glitch3'}>
-              <Complet></Complet>
+              <Complet> <span>Voir mon portfolio</span></Complet>
             </div>
             <div
               onClick={showPage}
-              onMouseEnter={() => mouseOn()}
-              onMouseLeave={() => mouseLeave()}
-              className="barreButton"
+              onMouseEnter={() => {
+                // textEnter()
+                mouseOn()
+              }}
+              onMouseLeave={() => {
+                // textLeave()
+                mouseLeave()
+
+              }}
+
+              className="barreButton cursor-pointer"
             >
               <div className="barAfter"></div>
 
+              
               <Complet>GO</Complet>
               <div className="constainerCache1">
                 <span className="cachePurple1"></span>

@@ -11,8 +11,8 @@ export function Footer({ socials, menus, copyright }) {
   let { textEnter, textEnter2, textLeave2, textLeave } =
     useContext(MouseContext)
   return (
-    <footer className="relative px-4 pt-8 pb-6">
-      <div className="container mx-auto bg-white">
+    <footer className="relative px-4 pt-8 pb-6  bg-white">
+      <div className="container mx-auto ">
         <div className="flex flex-wrap pt-6 text-center lg:text-left">
           <div className="w-full px-4 lg:w-6/12">
             <Typography
@@ -106,7 +106,7 @@ export function Footer({ socials, menus, copyright }) {
             <Typography
               variant="small"
               className="font-normal text-blue-gray-500"
-              onMouseEnter={textEnter2}
+              onMouseEnter={textEnter}
               onMouseLeave={textLeave2}
             >
               {copyright}

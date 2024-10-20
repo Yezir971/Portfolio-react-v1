@@ -138,7 +138,7 @@ export function Home() {
         </div>
         <div className="relative flex h-screen content-center items-center justify-center pt-16 pb-32">
           <div className="absolute top-0 h-full w-full bg-[url('/img/background-3.png')] bg-cover bg-center" />
-          <div className="absolute top-0  h-full w-full bg-black/60 bg-cover bg-center" />
+          <div className="absolute top-0  h-full w-full bg-black bg-cover bg-center" />
           <div className="max-w-8xl container relative mx-auto">
             <div className="flex flex-wrap items-center">
               <div className="ml-auto mr-auto w-full px-4 text-center lg:w-8/12">
@@ -213,7 +213,9 @@ export function Home() {
                               onMouseLeave={textLeave2}
                               target="_blank"
                             >
-                              <i className={`cursor-pointer fa-brands text-xl fa-${name}`} />
+                              <i
+                                className={`cursor-pointer fa-brands text-xl fa-${name}`}
+                              />
                             </a>
                           </IconButton>
                         ))}
@@ -347,6 +349,8 @@ export function Home() {
                 >
                   <a target="_blank" href={projet.linkProjet}>
                     <img
+                      onMouseEnter={textEnter}
+                      onMouseLeave={textLeave2}
                       src={projet.pictureProjet}
                       className="rounded-t-lg"
                       alt={projet.altPicture}
@@ -354,15 +358,25 @@ export function Home() {
                   </a>
                   <div className="p-5">
                     <a target="_blank" href={projet.linkProjet}>
-                      <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                      <h5
+                        onMouseEnter={textEnter}
+                        onMouseLeave={textLeave2}
+                        className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+                      >
                         {projet.titleProjet}
                       </h5>
                     </a>
-                    <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                    <p
+                      onMouseEnter={textEnter}
+                      onMouseLeave={textLeave2}
+                      className="mb-3 font-normal text-gray-700 dark:text-gray-400"
+                    >
                       {projet.descriptionProjet}
                     </p>
                     <div className="flex justify-between">
                       <a
+                        onMouseEnter={textEnter}
+                        onMouseLeave={textLeave2}
                         target="_blank"
                         href={projet.linkProjet}
                         className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-red-gray-600"
@@ -370,6 +384,8 @@ export function Home() {
                         Voir le projet
                       </a>
                       <a
+                        onMouseEnter={textEnter}
+                        onMouseLeave={textLeave2}
                         target="_blank"
                         href={projet.depotGit}
                         className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-red-gray-600"
