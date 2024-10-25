@@ -22,7 +22,7 @@ export function Footer({ socials, menus, copyright }) {
             >
               James Ahmedaly
             </Typography>
-            <Link to="/" href="https://james-ahmedaly.com">
+            <Link to="https://james-ahmedaly.com">
               <img
                 onMouseEnter={textEnter}
                 onMouseLeave={textLeave2}
@@ -75,7 +75,7 @@ export function Footer({ socials, menus, copyright }) {
                           variant="small"
                           onMouseEnter={textEnter}
                           onMouseLeave={textLeave2}
-                          className="mb-2 block font-normal text-black"
+                          className="mb-2 block font-normal text-black break-words"
                         >
                           {item.name}
                         </Typography>

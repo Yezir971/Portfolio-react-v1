@@ -1,6 +1,6 @@
 export const parcoursData = [
     {
-        date:"Septembre 2023 / juin 2024",
+        date:"Septembre 2023 - juin 2024",
         titreDiplome:"Digital Campus",
         descriptionDiplome:"Bachelor 1 - 2 Développement Web",
     },

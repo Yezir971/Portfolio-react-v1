@@ -190,7 +190,7 @@ export function Home() {
             >
               <PageTitle heading="Qui suis je ?">
                 Passionné par la création de sites web modernes et intuitifs, je
-                maîtrise HTML, CSS, JavaScript et des frameworks comme React.
+                maîtrise HTML, CSS, JavaScript et des librairies comme React.
                 Curieux et motivé, j'aime relever des défis techniques et
                 collaborer sur des projets innovants. Je suis actuellement à la
                 recherche d’une alternance, je serais ravi de rejoindre votre

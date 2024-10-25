@@ -39,7 +39,7 @@ export function Navbar({ routes, action }) {
   return (
     <MTNavbar color="transparent" className="p-6">
       <div className="container mx-auto flex items-center justify-between text-white">
-        <Link to="/">
+        <Link to="https://james-ahmedaly.com">
           <img
             onMouseEnter={textEnter}
             onMouseLeave={textLeave}

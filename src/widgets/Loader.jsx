@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import '../assets/style/chargement.css'
 import '../assets/style/hidden.css'
 import { UserContext } from '@/context/userContext'
+import { MouseContext } from '@/context/mouseContext'
+
 // import { MouseContext } from '@/context/mouseContext'
 const Bar = styled.div`
   width: 14em;
@@ -17,8 +19,8 @@ const Complet = styled.span`
   font-weight: 100;
   font-size: larger;
   position: absolute;
-  top: -7px;
-  left: -2px;
+  top: -6px;
+  left: 0px;
   z-index: 3;
 `
 
@@ -27,12 +29,12 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgb(16,16,16);
+  background: rgb(16, 16, 16);
   position: absolute;
 `
 export function Loader() {
-  // let { textEnter, textEnter2, textLeave2, textLeave } =
-  // useContext(MouseContext)
+  let { textEnter, textEnter2, textLeave2, textLeave } =
+    useContext(MouseContext)
   const [prec, setPrec] = useState(0)
   const [showGlitch, setShowglitch] = useState(false)
   let { passeClick, setPasseClick } = useContext(UserContext)
@@ -47,7 +49,6 @@ export function Loader() {
     setShowglitch(false)
   }
 
-
   useEffect(() => {
     const interval = setInterval(() => {
       setPrec((prevPrec) => {
@@ -58,12 +59,10 @@ export function Loader() {
           return prevPrec
         }
       })
-
     }, 10)
-    
+
     return () => clearInterval(interval)
   }, [])
-
 
   return (
     <>
@@ -84,34 +83,40 @@ export function Loader() {
         ) : (
           <>
             <div className={showGlitch ? 'active glitch1' : 'glitch1'}>
-              
               <Complet>GO</Complet>
             </div>
             <div className={showGlitch ? 'active glitch2' : 'glitch2'}>
               <Complet>GO</Complet>
             </div>
             <div className={showGlitch ? 'active glitch3' : 'glitch3'}>
-              <Complet> <span>Voir mon portfolio</span></Complet>
+              <Complet>
+                {' '}
+                <span>GO</span>
+              </Complet>
             </div>
             <div
               onClick={showPage}
               onMouseEnter={() => {
                 // textEnter()
                 mouseOn()
+                textEnter()
               }}
               onMouseLeave={() => {
                 // textLeave()
                 mouseLeave()
-
+                textLeave()
               }}
-
               className="barreButton cursor-pointer"
+
             >
               <div className="barAfter"></div>
 
+              <Complet >
+               Click on me !
+              </Complet>
+              <div 
               
-              <Complet>GO</Complet>
-              <div className="constainerCache1">
+              className="constainerCache1">
                 <span className="cachePurple1"></span>
                 <span className="cacheGreen1"></span>
               </div>
