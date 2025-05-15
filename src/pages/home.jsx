@@ -347,7 +347,7 @@ export function Home() {
                   key={index}
                   className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
                 >
-                  <a target="_blank" href={projet.linkProjet}>
+                  <a target="_blank" href={`https://james-ahmedaly.com/description/${index}`}>
                     <img
                       onMouseEnter={textEnter}
                       onMouseLeave={textLeave2}
