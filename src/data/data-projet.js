@@ -15,7 +15,7 @@ export const dataProjet =[
         depotGit:'https://github.com/Yezir971/projet-Application-meteo',
         pictureDescription: [
             'https://james-ahmedaly.com/img/app_meteo.webp',
-            'https://james-ahmedaly.com/img/app_meteo2.webp'
+            'https://james-ahmedaly.com/img/app_meteo2.png'
         ]
     },
     {
@@ -33,9 +33,9 @@ export const dataProjet =[
         depotGit:'https://github.com/Yezir971/messanger',
         pictureDescription: [
             'https://james-ahmedaly.com/img/chat-me.webp',
-            'https://james-ahmedaly.com/img/chat-me2.webp',
-            'https://james-ahmedaly.com/img/chat-me3.webp',
-            'https://james-ahmedaly.com/img/chat-me4.webp',
+            'https://james-ahmedaly.com/img/chat-me2.png',
+            'https://james-ahmedaly.com/img/chat-me3.png',
+            'https://james-ahmedaly.com/img/chat-me4.png',
         ]
     },
     {
@@ -53,7 +53,7 @@ export const dataProjet =[
         ],
         depotGit:'https://github.com/Yezir971/Projet-generateur-de-mot-de-passe',
         pictureDescription: [
-            'https://james-ahmedaly.com/img/app_meteo.webp'
+            'https://james-ahmedaly.com/img/generateur_mdp.webp'
         ]
     },
     {
