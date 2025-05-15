@@ -16,7 +16,7 @@ const Description = () => {
   
   const returnHome = () => {
     setPasseClick(true)
-    navigate('/')
+    navigate('https://james-ahmedaly.com/#projets')
   }
   console.log(id)
   return (
