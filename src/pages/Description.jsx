@@ -16,13 +16,16 @@ const Description = () => {
   
   const returnHome = () => {
     setPasseClick(true)
-    navigate('https://james-ahmedaly.com/#projets')
+    navigate('/#projets')
   }
   console.log(id)
   return (
     <>
       <CustomCursor />
-      <div className="container bg-black absolute left-2/4 top-4 z-10 mx-auto -translate-x-2/4  ">
+      <a 
+        className="container bg-black absolute left-2/4 top-4 z-10 mx-auto -translate-x-2/4"
+        href='/#projets'
+      >
       <i                   
         onMouseEnter={textEnter}
         onMouseLeave={textLeave} 
@@ -30,7 +33,7 @@ const Description = () => {
         className="cursor-pointer fa-solid fa-left-long text-white text-3xl " 
       />
 
-      </div>
+      </a>
       <div className="relative flex h-80 content-center items-center justify-center pt-16 pb-32">
         <div className="absolute top-0  h-80 w-full bg-black bg-cover bg-center flex justify-center items-center">
           <div className="max-w-8xl container relative mx-auto">
