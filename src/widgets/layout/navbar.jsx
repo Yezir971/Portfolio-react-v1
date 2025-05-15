@@ -1,6 +1,5 @@
 import React, { useContext } from 'react'
 import PropTypes from 'prop-types'
-import { Link } from 'react-router-dom'
 import classNames from 'classnames'
 import {
   Navbar as MTNavbar,
@@ -39,7 +38,7 @@ export function Navbar({ routes, action }) {
   return (
     <MTNavbar color="transparent" className="p-6">
       <div className="container mx-auto flex items-center justify-between text-white">
-        <Link to="https://james-ahmedaly.com">
+        <a href="https://james-ahmedaly.com">
           <img
             onMouseEnter={textEnter}
             onMouseLeave={textLeave}
@@ -47,7 +46,7 @@ export function Navbar({ routes, action }) {
             src={logoData[0].imgSrc}
             alt="Logo James Ahmedaly"
           />
-        </Link>
+        </a>
         <div
           onMouseEnter={textEnter}
           onMouseLeave={textLeave}

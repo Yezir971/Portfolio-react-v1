@@ -3,7 +3,6 @@ import { Typography, IconButton } from '@material-tailwind/react'
 import { logoData } from '@/data'
 import { MouseContext } from '@/context/mouseContext'
 import { useContext } from 'react'
-import { Link } from 'react-router-dom'
 
 const year = new Date().getFullYear()
 
@@ -22,7 +21,7 @@ export function Footer({ socials, menus, copyright }) {
             >
               James Ahmedaly
             </Typography>
-            <Link to="https://james-ahmedaly.com">
+            <a href="https://james-ahmedaly.com">
               <img
                 onMouseEnter={textEnter}
                 onMouseLeave={textLeave2}
@@ -30,7 +29,7 @@ export function Footer({ socials, menus, copyright }) {
                 src={logoData[0].imgSrc}
                 alt="logo Ahmedaly James"
               />
-            </Link>
+            </a>
             <div className="mx-auto mt-6 mb-8 flex justify-center gap-2 md:mb-0 lg:justify-start">
               {socials.map(({ color, name, path }) => (
                 <a

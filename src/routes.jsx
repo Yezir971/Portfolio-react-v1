@@ -1,9 +1,10 @@
-import { Home} from "@/pages";
+import { Home } from "@/pages";
 import Error from "./pages/error";
 import Politique from "./pages/politique";
 import Mention from "./pages/mention";
 import Login from "./pages/Login";
 import SignUp from "./pages/signUp";
+import Description from "./pages/Description";
 
 export const routes = [
   {
@@ -35,6 +36,11 @@ export const routes = [
     name:"signUp",
     path:"/hearts",
     element: <SignUp />,
+  },
+  {
+    name:"description",
+    path:"/description/:id",
+    element: <Description />,
   },
 ];
 

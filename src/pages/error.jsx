@@ -6,8 +6,7 @@ import { Typography } from '@material-tailwind/react'
 import { useContext } from 'react'
 
 function Error() {
-  let { textEnter, textEnter2, textLeave, textLeave2 } =
-    useContext(MouseContext)
+  let { textEnter, textEnter2, textLeave, textLeave2 } = useContext(MouseContext)
   return (
     <>
       <CustomCursor />
