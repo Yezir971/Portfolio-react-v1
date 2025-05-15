@@ -62,6 +62,7 @@ export function Footer({ socials, menus, copyright }) {
                   onMouseEnter={textEnter}
                   onMouseLeave={textLeave2}
                 >
+                  
                   {name}
                 </Typography>
                 <ul className="mt-3 ">
