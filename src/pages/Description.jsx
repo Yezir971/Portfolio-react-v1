@@ -32,9 +32,6 @@ const Description = () => {
 
       </div>
       <div className="relative flex h-80 content-center items-center justify-center pt-16 pb-32">
-        <div
-          className={`absolute top-0 h-full w-full bg-[url(${dataProjet[id].pictureProjet})] bg-cover bg-center`}
-        />
         <div className="absolute top-0  h-80 w-full bg-black bg-cover bg-center flex justify-center items-center">
           <div className="max-w-8xl container relative mx-auto">
             <div className="flex flex-wrap items-center">
