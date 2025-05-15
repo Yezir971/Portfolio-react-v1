@@ -1,7 +1,7 @@
 
 export const logoData = [
     {
-        imgSrc:"img/logo4.webp",
+        imgSrc:"https://james-ahmedaly.com/img/logo4.webp",
         description:"Logo James Ahmedaly",
     },
 ];

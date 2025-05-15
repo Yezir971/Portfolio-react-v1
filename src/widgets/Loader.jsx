@@ -4,6 +4,7 @@ import '../assets/style/chargement.css'
 import '../assets/style/hidden.css'
 import { UserContext } from '@/context/userContext'
 import { MouseContext } from '@/context/mouseContext'
+import { logoData } from '@/data'
 
 // import { MouseContext } from '@/context/mouseContext'
 const Bar = styled.div`
@@ -29,6 +30,7 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction:column;
   background: rgb(16, 16, 16);
   position: absolute;
 `
@@ -67,6 +69,7 @@ export function Loader() {
   return (
     <>
       <Container className={!passeClick ? 'preloader' : 'preloader isHidden'}>
+      {/* <img src={logoData[0].imgSrc} alt="Logo James Ahmedaly" /> */}
         {prec !== 100 ? (
           <>
             <span></span>

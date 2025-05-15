@@ -182,7 +182,7 @@ export function Home() {
               </div>
             </div>
           </section>
-          <section className="px-4 pt-20 pb-20 bg-white ">
+          <section className="px-4 pt-20 pb-20 bg-white">
             <div
               id="a-propos"
               data-aos="fade-down"
@@ -361,7 +361,7 @@ export function Home() {
                       <h5
                         onMouseEnter={textEnter}
                         onMouseLeave={textLeave2}
-                        className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+                        className="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white"
                       >
                         {projet.titleProjet}
                       </h5>
