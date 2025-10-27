@@ -18,7 +18,6 @@ const Description = () => {
     setPasseClick(true)
     navigate('/#projets')
   }
-  console.log(id)
   return (
     <>
       <CustomCursor />
