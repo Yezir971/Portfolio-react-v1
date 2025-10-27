@@ -58,7 +58,6 @@ export function Home() {
   }
   const validateInput = (name) => {
     if (name.trim() == '') {
-      console.log(name.trim())
       return true
     }
     return false
@@ -80,13 +79,9 @@ export function Home() {
 
   const sendMessageToBdd = async (e) => {
     e.preventDefault()
-    // console.log(nameRef)
     let name = formRef.current[0].value
     let mail = formRef.current[1].value
     let message = formRef.current[2].value
-    console.log(name)
-    console.log(mail)
-    console.log(message)
     if (
       validateInput(formRef.current[0].value) ||
       validateInput(formRef.current[1].value) ||
@@ -347,7 +342,7 @@ export function Home() {
                   key={index}
                   className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
                 >
-                  <a target="_blank" href={projet.linkProjet}>
+                  <a href={`https://james-ahmedaly.com/description/${index}`}>
                     <img
                       onMouseEnter={textEnter}
                       onMouseLeave={textLeave2}

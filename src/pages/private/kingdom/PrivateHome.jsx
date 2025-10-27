@@ -43,10 +43,10 @@ function PrivateHome() {
         console.log('Aucune data a été récupérée !')
       }
     })
+    
 
     return () => unsubscribe() // Clean up the listener on component unmount, merci chatgpt pour la ligne 100, sans elle mon code marche pas <3
   }, [])
-  // messageListe.map((mess) => console.log(mess))
 
   return (
     <div className="flex justify-center items-center flex-col h-screen">

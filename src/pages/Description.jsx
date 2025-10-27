@@ -2,21 +2,38 @@ import { MouseContext } from '@/context/mouseContext'
 import CustomCursor from '@/widgets/cursor/Cursor'
 import { Typography } from '@material-tailwind/react'
 import { useContext } from 'react'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { dataProjet } from '@/data'
-import { Footer } from '@/widgets/layout'
+import { Footer, Navbar } from '@/widgets/layout'
+import routes from '@/routes'
+import { UserContext } from '@/context/userContext'
 const Description = () => {
   let { textEnter, textEnter2, textLeave, textLeave2 } =
     useContext(MouseContext)
   let { id } = useParams()
-  console.log(id)
+  let navigate = useNavigate()
+  let { setPasseClick } = useContext(UserContext)
+  
+  const returnHome = () => {
+    setPasseClick(true)
+    navigate('/#projets')
+  }
   return (
     <>
       <CustomCursor />
+      <a 
+        className="container bg-black absolute left-2/4 top-4 z-10 mx-auto -translate-x-2/4"
+        href='/#projets'
+      >
+      <i                   
+        onMouseEnter={textEnter}
+        onMouseLeave={textLeave} 
+        onClick={returnHome} 
+        className="cursor-pointer fa-solid fa-left-long text-white text-3xl " 
+      />
+
+      </a>
       <div className="relative flex h-80 content-center items-center justify-center pt-16 pb-32">
-        <div
-          className={`absolute top-0 h-full w-full bg-[url(${dataProjet[id].pictureProjet})] bg-cover bg-center`}
-        />
         <div className="absolute top-0  h-80 w-full bg-black bg-cover bg-center flex justify-center items-center">
           <div className="max-w-8xl container relative mx-auto">
             <div className="flex flex-wrap items-center">

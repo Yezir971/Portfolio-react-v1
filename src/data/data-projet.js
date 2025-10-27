@@ -15,7 +15,7 @@ export const dataProjet =[
         depotGit:'https://github.com/Yezir971/projet-Application-meteo',
         pictureDescription: [
             'https://james-ahmedaly.com/img/app_meteo.webp',
-            'https://james-ahmedaly.com/img/app_meteo2.webp'
+            'https://james-ahmedaly.com/img/app_meteo2.png'
         ]
     },
     {
@@ -33,9 +33,9 @@ export const dataProjet =[
         depotGit:'https://github.com/Yezir971/messanger',
         pictureDescription: [
             'https://james-ahmedaly.com/img/chat-me.webp',
-            'https://james-ahmedaly.com/img/chat-me2.webp',
-            'https://james-ahmedaly.com/img/chat-me3.webp',
-            'https://james-ahmedaly.com/img/chat-me4.webp',
+            'https://james-ahmedaly.com/img/chat-me2.png',
+            'https://james-ahmedaly.com/img/chat-me3.png',
+            'https://james-ahmedaly.com/img/chat-me4.png',
         ]
     },
     {
@@ -53,19 +53,19 @@ export const dataProjet =[
         ],
         depotGit:'https://github.com/Yezir971/Projet-generateur-de-mot-de-passe',
         pictureDescription: [
-            'https://james-ahmedaly.com/img/app_meteo.webp'
+            'https://james-ahmedaly.com/img/generateur_mdp.webp'
         ]
     },
     {
-        titleProjet:'Site wordpress Cabinet Orthopédagogique',
+        titleProjet:'Site WordPress Cabinet Orthopédagogique',
         pictureProjet:'https://james-ahmedaly.com/img/soutien-orthopedagogique.png',
-        altPicture:'Image du projet wordpress orthopédagogique',
+        altPicture:'Image du projet WordPress orthopédagogique',
         descriptionProjet:'Site vitrine WordPress pour un cabinet orthopédagogique, conçu pour présenter les services et faciliter la prise de contact.',
         longDescriptionProjet:'J’ai conçu et développé un site vitrine WordPress sur mesure pour un cabinet orthopédagogique. L’objectif principal était de mettre en avant les services offerts, l’approche bienveillante du cabinet, ainsi que de faciliter la prise de contact des familles. J’ai opté pour une interface claire et apaisante, en accord avec la sensibilité du public cible (parents, enfants et adolescents). Le site intègre également un blog informatif et un formulaire de contact optimisé.',
         linkProjet:'https://soutien-orthopedagogique.com/',
-        technoProjet:'Wordpress',
+        technoProjet:'WordPress',
         tech: [
-            'Wordpress'
+            'WordPress'
         ],
         depotGit:'https://github.com/KerdanetYvan/wp-tef',
         pictureDescription: [
@@ -99,7 +99,7 @@ export const dataProjet =[
     // {
     //     titleProjet:'Clone de Twitter',
     //     pictureProjet:'https://james-ahmedaly.com/img/soutien-orthopedagogique.png',
-    //     altPicture:'Image du projet wordpress orthopédagogique',
+    //     altPicture:'Image du projet WordPress orthopédagogique',
     //     descriptionProjet:'Site vitrine WordPress pour un cabinet orthopédagogique, conçu pour présenter les services et faciliter la prise de contact.',
     //     longDescriptionProjet:'J’ai conçu et développé un site vitrine WordPress sur mesure pour un cabinet orthopédagogique. L’objectif principal était de mettre en avant les services offerts, l’approche bienveillante du cabinet, ainsi que de faciliter la prise de contact des familles. J’ai opté pour une interface claire et apaisante, en accord avec la sensibilité du public cible (parents, enfants et adolescents). Le site intègre également un blog informatif et un formulaire de contact optimisé.',
     //     linkProjet:'https://soutien-orthopedagogique.com/',
