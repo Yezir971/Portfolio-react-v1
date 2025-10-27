@@ -43,6 +43,7 @@ function PrivateHome() {
         console.log('Aucune data a été récupérée !')
       }
     })
+    
 
     return () => unsubscribe() // Clean up the listener on component unmount, merci chatgpt pour la ligne 100, sans elle mon code marche pas <3
   }, [])
