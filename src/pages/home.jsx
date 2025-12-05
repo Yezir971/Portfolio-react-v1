@@ -26,6 +26,7 @@ import routes from '@/routes'
 import styled, { keyframes } from 'styled-components'
 import CustomCursor from '@/widgets/cursor/Cursor'
 import { MouseContext } from '@/context/mouseContext'
+import Services from '@/widgets/layout/services'
 
 const fadeIn = keyframes`
   from {
@@ -223,14 +224,14 @@ export function Home() {
           </section>
 
           <section
-            id="monParcours"
+            id="mon-parcours"
             className="container mx-auto relative bg-white pb-20 pt-20 px-4"
           >
             <PageTitleParcours>
               Un aperçu rapide de mon parcours
             </PageTitleParcours>
             <div
-              id="monParcours"
+              id="mon-parcours"
               className="container mt-24   grid grid-cols-1 md:grid-cols-2 col-span-2 "
             >
               <div>
@@ -394,7 +395,10 @@ export function Home() {
             </div>
           </section>
 
-          <section id="meContacter" className=" pb-20 pt-20 px-4 bg-white">
+          <section id="services" className=" pb-20 pt-20 px-4 bg-white">
+            <Services />
+          </section>
+          <section id="me-contacter" className=" pb-20 pt-20 px-4 bg-white">
             <div className="container mx-auto ">
               <PageTitle heading="Intéressé par mon profil ?">
                 Remplissez ce formulaire et je vous répondrai dans les 24

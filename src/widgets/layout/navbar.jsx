@@ -27,10 +27,13 @@ export function Navbar({ routes, action }) {
         <a href="https://james-ahmedaly.com/#a-propos">À propos</a>
       </li>
       <li className="capitalize gap-1 p-1 font-bold cursor-pointer">
-        <a href="https://james-ahmedaly.com/#monParcours">Parcours</a>
+        <a href="https://james-ahmedaly.com/#mon-parcours">Parcours</a>
       </li>
       <li className="capitalize gap-1 p-1 font-bold cursor-pointer">
         <a href="https://james-ahmedaly.com/#projets">Projets</a>
+      </li>
+      <li className="capitalize gap-1 p-1 font-bold cursor-pointer">
+        <a href="https://james-ahmedaly.com/#services">Services</a>
       </li>
     </ul>
   )
@@ -124,7 +127,7 @@ export function Navbar({ routes, action }) {
 
 Navbar.defaultProps = {
   action: (
-    <a href="/#meContacter">
+    <a href="/#me-contacter">
       <Button variant="gradient" size="sm" className="cursor-pointer" fullWidth>
         Me contacter
       </Button>
